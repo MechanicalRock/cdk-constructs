@@ -12,8 +12,8 @@ export interface Props extends PipelineProps {
 
 export class GithubNodePipeline extends Construct {
 
-  private codeBuildRole: Role;
-  private pipeline: Pipeline;
+  codeBuildRole: Role;
+  pipeline: Pipeline;
 
   constructor(parent: Construct, private name: string, private props: Props) {
     super(parent, name);

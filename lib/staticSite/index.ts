@@ -11,10 +11,10 @@ export interface StaticSiteProps {
 
 export class StaticWebsite extends Construct {
 
-  private siteDomain: string;
-  private originAccessIdentity: CfnCloudFrontOriginAccessIdentity;
-  private siteBucket: Bucket;
-  private siteDistribution: CloudFrontWebDistribution;
+  siteDomain: string;
+  originAccessIdentity: CfnCloudFrontOriginAccessIdentity;
+  siteBucket: Bucket;
+  siteDistribution: CloudFrontWebDistribution;
 
   constructor(parent: Construct, name: string, private props: StaticSiteProps) {
     super(parent, name);
