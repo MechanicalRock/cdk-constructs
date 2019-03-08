@@ -1,0 +1,43 @@
+{
+  "name": "@mechanicalrock/cdk-constructs",
+  "version": "0.0.2",
+  "description": "CDK constructs to enable creation of AWS resources for projects.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "build": "rm -rf dist && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MechanicalRock/cdk-constructs.git"
+  },
+  "keywords": [
+    "cdk",
+    "constructs"
+  ],
+  "author": "mechanical rock",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MechanicalRock/cdk-constructs/issues"
+  },
+  "homepage": "https://github.com/MechanicalRock/cdk-constructs#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.9",
+    "aws-cdk": "^0.25.2",
+    "coveralls": "^3.0.3",
+    "jest": "^24.3.1",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-cloudfront": "0.24.1",
+    "@aws-cdk/aws-codebuild": "0.24.1",
+    "@aws-cdk/aws-codepipeline": "0.24.1",
+    "@aws-cdk/aws-s3": "0.24.1",
+    "@aws-cdk/cdk": "0.24.1"
+  },
+  "files": [
+    "dist/"
+  ]
+}
