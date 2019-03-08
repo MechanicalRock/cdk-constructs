@@ -1,5 +1,5 @@
 [![CircleCI](https://circleci.com/gh/MechanicalRock/cdk-constructs.svg?style=svg)](https://circleci.com/gh/MechanicalRock/cdk-constructs)
-[![npm version](https://badge.fury.io/js/@mechanicalrock/cdk-constructs.svg)](https://badge.fury.io/js/@mechanicalrock/cdk-constructs)
+[![npm version](https://badge.fury.io/js//cdk-constructs.svg)](https://badge.fury.io/js/cdk-constructs)
 [![Coverage Status](https://coveralls.io/repos/github/MechanicalRock/cdk-constructs/badge.svg?branch=master)](https://coveralls.io/github/MechanicalRock/cdk-constructs?branch=master)
 
 # cdk-constructs
@@ -8,7 +8,7 @@ CDK constructs to enable creation of AWS resources for projects.
 ## Install
 
 ```
-npm i -D @mechanicalrock/cdk-constructs
+npm i -D cdk-constructs
 ```
 
 ## Usage 
