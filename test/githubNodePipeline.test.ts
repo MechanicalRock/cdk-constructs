@@ -1,4 +1,4 @@
-import { App, Stack } from '@aws-cdk/cdk';
+import { App, Stack, Secret } from '@aws-cdk/cdk';
 import { GithubNodePipeline } from '../lib';
 import { createExpectedResource } from './utils';
 
@@ -18,7 +18,7 @@ describe('Github Node Pipeline', () => {
     const pipeline = new GithubNodePipeline(stack, name, {
       githubOwner: 'Me',
       repoName: 'myRepo',
-      ssmGithubTokenName: 'github-oauth-token',
+      ssmGithubAccessToken: new Secret('the secret', 'AccessToken'),
       codeBuildRolePolicy: 'arn:aws:iam::aws:policy/myPolicy'
     });
 
