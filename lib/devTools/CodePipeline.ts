@@ -1,7 +1,7 @@
 import { LinuxBuildImage, PipelineBuildAction, PipelineBuildActionProps, PipelineProject } from '@aws-cdk/aws-codebuild';
 import { GitHubSourceAction, Pipeline, PipelineProps } from '@aws-cdk/aws-codepipeline';
 import { Role, ServicePrincipal } from '@aws-cdk/aws-iam';
-import { Construct, SSMParameterProvider, Secret, SecretParameter } from '@aws-cdk/cdk';
+import { Construct, SecretParameter } from '@aws-cdk/cdk';
 
 export interface Props extends PipelineProps {
   githubOwner: string
