@@ -2,21 +2,22 @@
 [![npm version](https://badge.fury.io/js//cdk-constructs.svg)](https://badge.fury.io/js/cdk-constructs)
 [![Coverage Status](https://coveralls.io/repos/github/MechanicalRock/cdk-constructs/badge.svg?branch=master)](https://coveralls.io/github/MechanicalRock/cdk-constructs?branch=master)
 
-# cdk-constructs
+# CDK Constructs
+
 CDK constructs to enable creation of AWS resources for projects.
 
 ## Install
 
-```
+```bash
 npm i -D cdk-constructs
 ```
 
-## Usage 
+## Usage
 
 To create constructs:
 
 ```typescript
-import { App } from '@aws-cdk/cdk';
+import { App, Tag, Stack, Secret } from '@aws-cdk/cdk';
 import { StaticWebsite, GithubNodePipeline } from '@mechanicalrock/cdk-constructs';
 
 const app = new App();
@@ -33,7 +34,7 @@ new StaticWebsite(stack, 'MyStaticSite', {
 new GithubNodePipeline(stack, 'MyPipeline', {
     githubOwner: 'Me',
     repoName: 'MyRepo',
-    ssmGithubTokenName: 'MyParam',
+    ssmGithubAccessToken: new Secret('my special secret', 'SpecialSecret'),
     codeBuildRolePolicy: 'MyPolicy'
 });
 
@@ -43,5 +44,3 @@ app.run();
 ## License
 
 Apache-2.0
-
-
