@@ -1,7 +1,7 @@
 import { LinuxBuildImage, PipelineBuildAction, PipelineBuildActionProps, PipelineProject } from '@aws-cdk/aws-codebuild';
 import { GitHubSourceAction, Pipeline, PipelineProps } from '@aws-cdk/aws-codepipeline';
 import { Role, ServicePrincipal } from '@aws-cdk/aws-iam';
-import { Construct, SSMParameterProvider } from '@aws-cdk/cdk';
+import { Construct, SSMParameterProvider, Secret, SecretParameter } from '@aws-cdk/cdk';
 
 export interface Props extends PipelineProps {
   githubOwner: string
@@ -65,10 +65,9 @@ export class GithubNodePipeline extends Construct {
   private createSourceStage(): void {
     const stage = this.pipeline.addStage('Checkout');
 
-
-    const oauthToken = new SSMParameterProvider(this, {
-      parameterName: this.props.ssmGithubTokenName
-    }).parameterValue();
+    const { value: oauthToken } = new SecretParameter(this, 'AccessToken', {
+      ssmParameter: this.props.ssmGithubTokenName
+    });
 
     new GitHubSourceAction(this, 'GithubSource', {
       owner: this.props.githubOwner,
