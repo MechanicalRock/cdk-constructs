@@ -1,6 +1,6 @@
 {
   "name": "cdk-constructs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CDK constructs to enable creation of AWS resources for projects.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
