@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@aws-cdk/aws-cloudfront": "0.24.1",
-    "@aws-cdk/aws-codebuild": "0.24.1",
+    "@aws-cdk/aws-codebuild": "0.39.0",
     "@aws-cdk/aws-codepipeline": "0.24.1",
     "@aws-cdk/aws-s3": "0.24.1",
     "@aws-cdk/cdk": "0.24.1"
